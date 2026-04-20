@@ -37,25 +37,3 @@ overlay.onclick = function() {
     sidebar.classList.remove('open');
     overlay.classList.remove('open');
 }
-
-let lightbox = document.getElementById('lightbox');
-let lightboxImg = document.getElementById('lightboxImg');
-let lightboxClose = document.getElementById('lightboxClose');
-let galleryImgs = document.querySelectorAll('.photos img');
-
-for (let i = 0; i < galleryImgs.length; i++) {
-    galleryImgs[i].onclick = function() {
-        lightboxImg.src = this.src;
-        lightbox.classList.add('open');
-    }
-}
-
-lightboxClose.onclick = function() {
-    lightbox.classList.remove('open');
-}
-
-lightbox.onclick = function(e) {
-    if (e.target === lightbox) {
-        lightbox.classList.remove('open');
-    }
-}
